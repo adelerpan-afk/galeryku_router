@@ -1,3 +1,5 @@
+npm i -D typescript @types/react @types/react-dom @types/node
+
 {
   "name": "next-empty-starter",
   "version": "0.1.0",
