@@ -54,6 +54,11 @@ export default function HomePage() {
         {err && (
           <div style={{ padding: 12, background: '#fff3f3', border: '1px solid #ffd6d6', borderRadius: 8 }}>
             <strong>Gagal memuat:</strong> {err}. Coba refresh halaman.
+            {err.includes('500') && (
+              <p style={{ marginTop: 10, paddingTop: 10, borderTop: '1px solid #ffd6d6', fontSize: 14, color: '#522' }}>
+                <strong>Tips:</strong> Kesalahan server (HTTP 500) ini kemungkinan besar disebabkan oleh kesalahan konfigurasi. Pastikan variabel lingkungan (ENV) untuk Cloudinary sudah diatur dengan benar di Vercel atau platform hosting Anda.
+              </p>
+            )}
           </div>
         )}
 
